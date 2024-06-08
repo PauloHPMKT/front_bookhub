@@ -1,7 +1,6 @@
+import { Outlet } from "react-router-dom"
 import { Container } from "./components/Container"
-import { HeaderTitle } from "./components/HeaderTItle"
-import { BooksProvider } from "./context/books"
-import { AppRoutes } from "./routes"
+import { HeaderTitle } from "./components/Header"
 
 function App() {
   return (
@@ -9,9 +8,7 @@ function App() {
       <Container>
         <HeaderTitle />
       </Container>
-      <BooksProvider>
-        <AppRoutes />    
-      </BooksProvider>
+      <Outlet />    
     </>
   )
 }
